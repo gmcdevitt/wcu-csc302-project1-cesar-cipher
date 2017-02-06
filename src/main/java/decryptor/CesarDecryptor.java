@@ -16,9 +16,22 @@ public class CesarDecryptor implements Decryptor {
                     'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
                     's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
+    /**
+     * Main crux of guessing an offset, taken from https://www.math.cornell.edu/~mec/2003-2004/cryptography/subs/frequencies.html
+     * General frequency of each letter in the english alphabet
+     */
+    private double[] letterFrequencies =
+            {8.12, 1.49, 2.71, 4.32, 12.02, 2.3, 2.03, 5.92, 7.31, 0.1,
+                    0.69, 3.98, 2.61, 6.95, 7.68, 1.82, 0.11, 6.02,
+                    6.28, 9.1, 2.88, 1.11, 2.09, 0.17, 2.11, 0.07};
+
+    public CesarDecryptor() {
+
+    }
+
     CesarDecryptor(int offset, String cipher) {
         this.setOffset(offset);
-        this.setCipher(cipher);
+        this.setCipher(cipher.toCharArray());
     }
 
     CesarDecryptor(int offset) {
@@ -26,16 +39,12 @@ public class CesarDecryptor implements Decryptor {
     }
 
     CesarDecryptor(String cipher) {
-        this.setCipher(cipher);
+        this.setCipher(cipher.toCharArray());
     }
 
-    public CesarDecryptor() {
-
-    }
-
-    private void setCipher(String cipher) {
-        this.cipher = cipher.toCharArray();
-        this.plaintext = new char[cipher.length()];
+    private void setCipher(char[] cipher) {
+        this.cipher = cipher;
+        this.plaintext = new char[cipher.length];
     }
 
     private void setOffset(int offset) {
@@ -53,6 +62,10 @@ public class CesarDecryptor implements Decryptor {
     }
 
     char getCipherCharacterByOffset(char cipherChar, Integer offset) {
+        if (offset == null) {
+            throw new RuntimeException("Offset is null!");
+        }
+
         char plainTextChar;
         if (CharUtils.isAsciiAlpha(cipherChar)) { //Only do the offset check if its actually a letter
             plainTextChar = alphabet[Math.abs((ArrayUtils.indexOf(alphabet, Character.toLowerCase(cipherChar)) + offset)) % 26]; //Main logic to decrypt
@@ -86,10 +99,18 @@ public class CesarDecryptor implements Decryptor {
 
         //Divide the count by the number of characters
         for (int i = 0; i < frequency.length; i++) {
-            frequency[i] = Double.valueOf(new DecimalFormat("#.#").format((frequency[i] / length) * 100));
+            frequency[i] = Double.valueOf(new DecimalFormat("#.##").format((frequency[i] / length) * 100));
         }
 
         return frequency;
+    }
+
+    public int guessOffset() {
+        double[] frequency = getLetterFrequency();
+
+
+
+        return 0;
     }
 }
 

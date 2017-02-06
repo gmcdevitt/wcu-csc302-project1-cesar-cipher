@@ -1,7 +1,7 @@
 package decryptor;
 
+import decryptor.resources.Stubs;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class CesarDecryptorTest {
@@ -46,9 +46,9 @@ public class CesarDecryptorTest {
     public void getLetterFrequency() {
         String cipher = "aaqqttxxvvbbennbnssxsetrrrttykyhhh";
         double[] expected = new double[]
-                {5.9, 8.8, 0.0, 0.0, 5.9, 0.0, 0.0, 8.8, 0.0, 0.0, 2.9,
-                        0.0, 0.0, 8.8, 0.0, 0.0, 5.9, 8.8, 8.8, 14.7,
-                        0.0, 5.9, 0.0, 8.8, 5.9, 0.0};
+                {5.88, 8.82, 0.0, 0.0, 5.88, 0.0, 0.0, 8.82, 0.0, 0.0, 2.94,
+                        0.0, 0.0, 8.82, 0.0, 0.0, 5.88, 8.82, 8.82, 14.71,
+                        0.0, 5.88, 0.0, 8.82, 5.88, 0.0};
 
         CesarDecryptor decryptor = new CesarDecryptor(cipher);
 
@@ -60,11 +60,15 @@ public class CesarDecryptorTest {
      *
      * I suppose we can always best-guess the solution first and then just brute force the other 25 possibilities... just to give the best shot
      *
-     * the problem with guessing offset is that the text has to be sufficiently large for the occurrence percentages to be accurate.
+     * the problem with guessing offset is that the text has to be sufficiently large for the occurrence percentages to be normalized.
+     *
+     * for guessing the offset, we should go off of the most occurring letter.
      */
     @Test
-    @Ignore("Not Implemented")
     public void guessOffset() {
+        int expectedOffset = 5;
+        CesarDecryptor decryptor = new CesarDecryptor(Stubs.cipherText);
 
+        Assert.assertEquals("The guessed offset was not 5!", expectedOffset, decryptor.guessOffset());
     }
 }
