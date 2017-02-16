@@ -1,0 +1,172 @@
+Memory Hierarchy.
+
+Accessing data and instructions from main memory is a time consuming operation
+which delays the work of the fast processors, for that reason the memory
+hierarchy includes smaller and faster memories called caches. Caches
+improve the performance by exploiting the spatial and temporal locality of
+the memory access.
+
+In modern processors the hierarchy of caches is structured as follows,
+higher-level caches, located closer to the processor core, are smaller and
+faster than low-level caches, which are located closer to main memory.
+Recent Intel architecture typically has three levels of cache: L1, L2 and
+Last-Level Cache (LLC).
+
+Each core has two L1 caches, a data cache and an instruction cache, each 32
+KiB in size with an access time of 4 cycles. L2 caches are also core-private
+and have an inter-mediate size (256 KiB) and latency (7 cycles). The LLC is
+shared among all of the cores and is a unified cache, containing both data
+and instructions. Typical LLC sizes are in megabytes and access time is in
+the order of 40 cycles.
+
+The unit of memory and allocation in a cache is called cache line.
+Cache lines are of a fixed size B, which is typically 64 bytes.
+The lg(B) low-order bits of the address, called line offset, are used to
+locate the datum in the cache line.
+
+When a memory address is accessed, the processor checks the availability
+of the address line in the top-level L1 cache. If the data is there then it
+is served to the processor, a situation referred to as a cache hit. In a
+cache miss, when the data is not found in the L1 cache, the processor
+repeats the search for the line in the next cache level and continues
+through all the caches. Once the line is found, the processor stores a copy
+in the cache for future use.
+
+Most caches are set-associative. They are composed of multiple cache sets i
+each containing a fixed number of cache lines. The number of cache lines in
+a set is the cache associativity, i.e., a cache with W lines in each set is a
+W-way set-associative cache.
+
+Since the main memory is orders of magnitude larger than the cache, more than
+W memory lines may map to the same cache set. If a cache miss occurs and all
+the cache lines in the matching cache set are in use, one of the cached
+lines is evicted, freeing a slot for a new line to be fetched from a
+lower-level memory. Several cache replacement policies exist to determine
+the cache line to evict when a cache miss occurs but the typical policy in
+use is an approximation to the least-recently-used (LRU).
+
+The last-level cache in modern Intel processors is inclusive. Inclusive
+caches contain a superset of the contents of the cache levels above them.
+In the case of Intel processors, the contents of the L1 and L2 caches is
+also stored in the last-level cache. A consequence of the inclusion property
+is that when data is evicted from the last-level cache it is also evicted
+from all of the other levels of cache in the processor.
+
+Intel architecture implements several cache optimizations. The spatial
+pre-fetcher pairs cache lines and attempt to fetch the pair of a missed line
+[17]. Consecutive accesses to memory addresses are detected and pre-fetched
+when the processor anticipates they may be required [17]. Additionally, when
+the processor is presented with a conditional branch, speculative execution
+brings the data of both branches into the cache before the branch condition
+is evaluated [35].  [30] noted that tracing the sequence of cache hits and
+misses of software may leak information on the internal working of the
+software, including information that may lead to recovering cryptographic
+keys.
+
+This idea was later extended and used for mounting several cache-based
+side-channel attacks [10, 29, 31]. Other attacks were shown against
+the L1-instruction cache [3], the branch prediction buffer [1, 2] and
+the last-level cache [20, 22, 25, 40].
+
+The Flush+Reload Attack.
+
+Our LLC-based attack is based on the Flush+Reload [20, 40] attack, which is
+a cache-based side-channel attack technique. Unlike the earlier Prime+Probe
+technique [29, 31] that detects activity in cache sets, the Flush+Reload
+technique identifies access to memory lines, giving it a higher resolution,
+a high accuracy and high signal-to-noise ratio.
+
+Like Prime+Probe, Flush+Reload relies on cache sharing between processes.
+Additionally, it requires data sharing, which is typically achieved through
+the use of shared libraries or using page de-duplication [6, 36].
+
+A round of the attack, which identifies victim access to a shared memory
+line, consists of three phases. In the first phase the adversary evicts
+the monitored memory line from the cache. In the second phase, the
+adversary waits a period of time so the victim has an opportunity to access
+the memory line. In the third phase, the adversary measures the time it takes
+to reload the memory line. If during the second phase the victim accesses the
+memory line, the line will be available in the cache and the reload operation
+in the third phase will take a short time. If, on the other hand, the victim
+does not access the memory line then the third phase takes a longer time
+as the memory line is loaded from main memory.
+
+The execution of the victim and the adversary processes are independent of
+each other, thus synchronization of probing is important and several factors
+need to be considered when processing the side-channel data. Some of those
+factors are the waiting period for the adversary between probes, memory
+lines to be probed, size of the side-channel trace and cache-hit threshold.
+One important goal for this attack is to achieve the best resolution
+possible while keeping the error rate low and one of the ways to achieve this
+is by targeting memory lines that occur frequently during execution, such
+as loop bodies. Several processor optimizations are in place during a
+typical process execution and an attacker must be aware of these
+optimizations to filter them during the analysis of the attack results.
+See [4, 39, 40] for discussions of some of these parameters.
+
+A typical implementation of the Flush+Reload attack makes use of the
+clflush instruction of the x86 and x64 instruction sets. The clflush
+instruction evicts a specific memory line from all the cache hierarchy
+and being an un- privileged instruction, it can be used by any process.
+
+The inclusiveness of the LLC is essential for the Flush+ Reload attack.
+Whenever a memory line is evicted from the LLC, the processor also evicts
+the line from all of the L1 and L2 caches. On processors that do not have
+an inclusive LLC, e.g., AMD processors, the attack does not work [40].
+See [24] for a variant of the technique that does not require an
+inclusive LLC.
+
+The Digital Signature Algorithm (DSA).
+
+A variant of the ElGamal signature scheme, DSA was first proposed by the U.S.
+National Institute of Standards and Technology (NIST). DSA uses the
+multiplicative group of a finite field. We use the following notation for DSA.
+Parameters: Primes p, q such that q divides (p âˆ’ 1), a generator g of
+multiplicative order q in GF (p) and an approved hash function h
+(e.g. SHA-1, SHA-256, SHA-512).
+
+Private-Public key pairs: The private key Î± is an integer uniformly chosen
+such that 0 < Î± < q and the corresponding public key y is given by
+y = g^Î± mod p. Calculating the private key given the public key requires
+solving the discrete logarithm problem and for correctly chosen parameters,
+this is an intractable problem.
+
+Signing: A given party, Alice, wants to send a signed message m to Bob: the
+message m is not necessarily encrypted. Using her private-public key pair
+(Î±A , yA ), Alice performs the following steps:
+1. Select uniformly at random a secret nonce k such that 0<k<q.
+2. Compute r = (g^k mod p) mod q and h(m).
+3. Compute s = k^(âˆ’1) (h(m) + Î±A r) mod q.
+4. Alice sends (m, r, s) to Bob.
+
+Verifying: Bob wants to be sure the message he received comes from
+Alice: a valid DSA signature gives strong evidence of authenticity. Bob
+performs the following steps to verify the signature:
+1. Reject the signature if it does not satisfy 0 < r < q and 0<s<q.
+2. Compute w = s^(âˆ’1) mod q and h(m).
+3. Compute u1 = h(m)w mod q and u2 = rw mod q.
+4. Compute v = (g^(u1) yA ^(u2) mod p) mod q.
+5. Accept the signature if and only if v = r holds.
+
+DSA in Practice.
+
+Putting it mildly, there is no consensus on key sizes, and furthermore
+keys seen in the wild and used in ubiquitous protocols have varying
+sizesâ€”sometimes dictated by existing and deployed standards. For example,
+NIST defines 1024-bit p with 160-bit q as â€œlegacy-useâ€ and 2048-bit p
+with 256-bit q as â€œacceptableâ€ [8]. We focus on these two parameter sets.
+
+SSHâ€™s Transport Layer Protocol lists DSA key type ssh-dss as â€œrequiredâ€ and
+defines r and s as 160-bit integers, implying 160-bit q. In fact the
+OpenSSH tool ssh-keygen defaults to 160-bit q and 1024-bit p for these key
+types, not allowing the user to override that option, and using the same
+parameters to generate the serverâ€™s host key. It is worth noting that
+recently as of version 7.0, OpenSSH disables host server DSA keys by a
+configurable default option, but of course this does not affect already
+deployed solutions.
+
+As a countermeasure to previous timing attacks, OpenSSLâ€™s DSA implementation
+pads nonces by adding either q or 2q to k. For the DSA signing algorithm,
+Step 2 is the performance bottleneck and the exponentiation algorithm used
+will prove to be of extreme importance when we later collect our side-channel
+information.

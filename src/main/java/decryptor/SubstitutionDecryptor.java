@@ -8,21 +8,30 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SubstitutionDecryptor extends CharacterDecryptor implements Decryptor {
+    private char[] determinedAlphabet;
 
     SubstitutionDecryptor(DataSource dataSource) {
         this.setCipher(dataSource.getContents());
     }
 
+    public SubstitutionDecryptor(DataSource dataSource, char[] alphabet) {
+        this.setCipher(dataSource.getContents());
+        this.determinedAlphabet = alphabet;
+    }
+
     public void decrypt() {
-        Map<Character, Character> letterMapping = getLetterMapping(getLetterFrequency());
-        boolean isUpper;
-        for (int i = 0; i < cipher.length; i++) {
-            isUpper = Character.isUpperCase(cipher[i]);
-            if (CharUtils.isAsciiAlpha(cipher[i])) {
-                plaintext[i] = isUpper ? Character.toUpperCase(letterMapping.get(Character.toLowerCase(cipher[i]))) : letterMapping.get(Character.toLowerCase(cipher[i]));
-            } else {
-                plaintext[i] = cipher[i];
+        Map<Character, Character> letterMapping = new HashMap<Character, Character>();
+        if (determinedAlphabet == null) {
+            //Do it the hard way
+            letterMapping = getLetterMapping(getLetterFrequency());
+            decrypt(letterMapping);
+        } else {
+            //Wow this is easy
+            //Build the map
+            for (int i = 0; i < 26; i++) {
+                letterMapping.put(alphabet[i], determinedAlphabet[i]);
             }
+            decrypt(letterMapping);
         }
     }
 
@@ -43,5 +52,17 @@ public class SubstitutionDecryptor extends CharacterDecryptor implements Decrypt
             letterMap.put(alphabet[i], alphabet[orderMap.get(indexOfLetter)]);
         }
         return letterMap;
+    }
+
+    private void decrypt(Map<Character, Character> mapping) {
+        boolean isUpper;
+        for (int i = 0; i < cipher.length; i++) {
+            isUpper = Character.isUpperCase(cipher[i]);
+            if (CharUtils.isAsciiAlpha(cipher[i])) {
+                plaintext[i] = isUpper ? Character.toUpperCase(mapping.get(Character.toLowerCase(cipher[i]))) : mapping.get(Character.toLowerCase(cipher[i]));
+            } else {
+                plaintext[i] = cipher[i];
+            }
+        }
     }
 }
