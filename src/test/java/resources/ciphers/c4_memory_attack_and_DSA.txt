@@ -1,0 +1,172 @@
+Pfprvd Okfvgviod.
+
+Giifwwkqn jgxg gqj kqwxvzixkrqw mvrp pgkq pfprvd kw g xkpf irqwzpkqn ryfvgxkrq
+bokio jftgdw xof brvs rm xof mgwx yvrifwwrvw, mrv xogx vfgwrq xof pfprvd
+okfvgviod kqitzjfw wpgttfv gqj mgwxfv pfprvkfw igttfj igiofw. Igiofw
+kpyvraf xof yfvmrvpgqif hd fcytrkxkqn xof wygxkgt gqj xfpyrvgt trigtkxd rm
+xof pfprvd giifww.
+
+Kq prjfvq yvrifwwrvw xof okfvgviod rm igiofw kw wxvzixzvfj gw mrttrbw,
+oknofv-tfaft igiofw, trigxfj itrwfv xr xof yvrifwwrv irvf, gvf wpgttfv gqj
+mgwxfv xogq trb-tfaft igiofw, bokio gvf trigxfj itrwfv xr pgkq pfprvd.
+Vfifqx Kqxft gviokxfixzvf xdykigttd ogw xovff tfaftw rm igiof: T1, T2 gqj
+Tgwx-Tfaft Igiof (TTI).
+
+Fgio irvf ogw xbr T1 igiofw, g jgxg igiof gqj gq kqwxvzixkrq igiof, fgio 32
+SkH kq wkef bkxo gq giifww xkpf rm 4 iditfw. T2 igiofw gvf gtwr irvf-yvkagxf
+gqj ogaf gq kqxfv-pfjkgxf wkef (256 SkH) gqj tgxfqid (7 iditfw). Xof TTI kw
+wogvfj gprqn gtt rm xof irvfw gqj kw g zqkmkfj igiof, irqxgkqkqn hrxo jgxg
+gqj kqwxvzixkrqw. Xdykigt TTI wkefw gvf kq pfnghdxfw gqj giifww xkpf kw kq
+xof rvjfv rm 40 iditfw.
+
+Xof zqkx rm pfprvd gqj gttrigxkrq kq g igiof kw igttfj igiof tkqf.
+Igiof tkqfw gvf rm g mkcfj wkef H, bokio kw xdykigttd 64 hdxfw.
+Xof tn(H) trb-rvjfv hkxw rm xof gjjvfww, igttfj tkqf rmmwfx, gvf zwfj xr
+trigxf xof jgxzp kq xof igiof tkqf.
+
+Bofq g pfprvd gjjvfww kw giifwwfj, xof yvrifwwrv iofisw xof gagktghktkxd
+rm xof gjjvfww tkqf kq xof xry-tfaft T1 igiof. Km xof jgxg kw xofvf xofq kx
+kw wfvafj xr xof yvrifwwrv, g wkxzgxkrq vfmfvvfj xr gw g igiof okx. Kq g
+igiof pkww, bofq xof jgxg kw qrx mrzqj kq xof T1 igiof, xof yvrifwwrv
+vfyfgxw xof wfgvio mrv xof tkqf kq xof qfcx igiof tfaft gqj irqxkqzfw
+xovrzno gtt xof igiofw. Rqif xof tkqf kw mrzqj, xof yvrifwwrv wxrvfw g iryd
+kq xof igiof mrv mzxzvf zwf.
+
+Prwx igiofw gvf wfx-gwwrikgxkaf. Xofd gvf irpyrwfj rm pztxkytf igiof wfxw k
+fgio irqxgkqkqn g mkcfj qzphfv rm igiof tkqfw. Xof qzphfv rm igiof tkqfw kq
+g wfx kw xof igiof gwwrikgxkakxd, k.f., g igiof bkxo B tkqfw kq fgio wfx kw g
+B-bgd wfx-gwwrikgxkaf igiof.
+
+Wkqif xof pgkq pfprvd kw rvjfvw rm pgnqkxzjf tgvnfv xogq xof igiof, prvf xogq
+B pfprvd tkqfw pgd pgy xr xof wgpf igiof wfx. Km g igiof pkww riizvw gqj gtt
+xof igiof tkqfw kq xof pgxiokqn igiof wfx gvf kq zwf, rqf rm xof igiofj
+tkqfw kw fakixfj, mvffkqn g wtrx mrv g qfb tkqf xr hf mfxiofj mvrp g
+trbfv-tfaft pfprvd. Wfafvgt igiof vfytgifpfqx yrtkikfw fckwx xr jfxfvpkqf
+xof igiof tkqf xr fakix bofq g igiof pkww riizvw hzx xof xdykigt yrtkid kq
+zwf kw gq gyyvrckpgxkrq xr xof tfgwx-vfifqxtd-zwfj (TVZ).
+
+Xof tgwx-tfaft igiof kq prjfvq Kqxft yvrifwwrvw kw kqitzwkaf. Kqitzwkaf
+igiofw irqxgkq g wzyfvwfx rm xof irqxfqxw rm xof igiof tfaftw ghraf xofp.
+Kq xof igwf rm Kqxft yvrifwwrvw, xof irqxfqxw rm xof T1 gqj T2 igiofw kw
+gtwr wxrvfj kq xof tgwx-tfaft igiof. G irqwfuzfqif rm xof kqitzwkrq yvryfvxd
+kw xogx bofq jgxg kw fakixfj mvrp xof tgwx-tfaft igiof kx kw gtwr fakixfj
+mvrp gtt rm xof rxofv tfaftw rm igiof kq xof yvrifwwrv.
+
+Kqxft gviokxfixzvf kpytfpfqxw wfafvgt igiof ryxkpkegxkrqw. Xof wygxkgt
+yvf-mfxiofv ygkvw igiof tkqfw gqj gxxfpyx xr mfxio xof ygkv rm g pkwwfj tkqf
+[17]. Irqwfizxkaf giifwwfw xr pfprvd gjjvfwwfw gvf jfxfixfj gqj yvf-mfxiofj
+bofq xof yvrifwwrv gqxkikygxfw xofd pgd hf vfuzkvfj [17]. Gjjkxkrqgttd, bofq
+xof yvrifwwrv kw yvfwfqxfj bkxo g irqjkxkrqgt hvgqio, wyfiztgxkaf fcfizxkrq
+hvkqnw xof jgxg rm hrxo hvgqiofw kqxr xof igiof hfmrvf xof hvgqio irqjkxkrq
+kw fagtzgxfj [35].  [30] qrxfj xogx xvgikqn xof wfuzfqif rm igiof okxw gqj
+pkwwfw rm wrmxbgvf pgd tfgs kqmrvpgxkrq rq xof kqxfvqgt brvskqn rm xof
+wrmxbgvf, kqitzjkqn kqmrvpgxkrq xogx pgd tfgj xr vfirafvkqn ivdyxrnvgyoki
+sfdw.
+
+Xokw kjfg bgw tgxfv fcxfqjfj gqj zwfj mrv przqxkqn wfafvgt igiof-hgwfj
+wkjf-iogqqft gxxgisw [10, 29, 31]. Rxofv gxxgisw bfvf worbq gngkqwx
+xof T1-kqwxvzixkrq igiof [3], xof hvgqio yvfjkixkrq hzmmfv [1, 2] gqj
+xof tgwx-tfaft igiof [20, 22, 25, 40].
+
+Xof Mtzwo+Vftrgj Gxxgis.
+
+Rzv TTI-hgwfj gxxgis kw hgwfj rq xof Mtzwo+Vftrgj [20, 40] gxxgis, bokio kw
+g igiof-hgwfj wkjf-iogqqft gxxgis xfioqkuzf. Zqtksf xof fgvtkfv Yvkpf+Yvrhf
+xfioqkuzf [29, 31] xogx jfxfixw gixkakxd kq igiof wfxw, xof Mtzwo+Vftrgj
+xfioqkuzf kjfqxkmkfw giifww xr pfprvd tkqfw, nkakqn kx g oknofv vfwrtzxkrq,
+g okno giizvgid gqj okno wknqgt-xr-qrkwf vgxkr.
+
+Tksf Yvkpf+Yvrhf, Mtzwo+Vftrgj vftkfw rq igiof wogvkqn hfxbffq yvrifwwfw.
+Gjjkxkrqgttd, kx vfuzkvfw jgxg wogvkqn, bokio kw xdykigttd giokfafj xovrzno
+xof zwf rm wogvfj tkhvgvkfw rv zwkqn ygnf jf-jzytkigxkrq [6, 36].
+
+G vrzqj rm xof gxxgis, bokio kjfqxkmkfw akixkp giifww xr g wogvfj pfprvd
+tkqf, irqwkwxw rm xovff yogwfw. Kq xof mkvwx yogwf xof gjafvwgvd fakixw
+xof prqkxrvfj pfprvd tkqf mvrp xof igiof. Kq xof wfirqj yogwf, xof
+gjafvwgvd bgkxw g yfvkrj rm xkpf wr xof akixkp ogw gq ryyrvxzqkxd xr giifww
+xof pfprvd tkqf. Kq xof xokvj yogwf, xof gjafvwgvd pfgwzvfw xof xkpf kx xgsfw
+xr vftrgj xof pfprvd tkqf. Km jzvkqn xof wfirqj yogwf xof akixkp giifwwfw xof
+pfprvd tkqf, xof tkqf bktt hf gagktghtf kq xof igiof gqj xof vftrgj ryfvgxkrq
+kq xof xokvj yogwf bktt xgsf g worvx xkpf. Km, rq xof rxofv ogqj, xof akixkp
+jrfw qrx giifww xof pfprvd tkqf xofq xof xokvj yogwf xgsfw g trqnfv xkpf
+gw xof pfprvd tkqf kw trgjfj mvrp pgkq pfprvd.
+
+Xof fcfizxkrq rm xof akixkp gqj xof gjafvwgvd yvrifwwfw gvf kqjfyfqjfqx rm
+fgio rxofv, xozw wdqiovrqkegxkrq rm yvrhkqn kw kpyrvxgqx gqj wfafvgt mgixrvw
+qffj xr hf irqwkjfvfj bofq yvrifwwkqn xof wkjf-iogqqft jgxg. Wrpf rm xorwf
+mgixrvw gvf xof bgkxkqn yfvkrj mrv xof gjafvwgvd hfxbffq yvrhfw, pfprvd
+tkqfw xr hf yvrhfj, wkef rm xof wkjf-iogqqft xvgif gqj igiof-okx xovfwortj.
+Rqf kpyrvxgqx nrgt mrv xokw gxxgis kw xr giokfaf xof hfwx vfwrtzxkrq
+yrwwkhtf boktf sffykqn xof fvvrv vgxf trb gqj rqf rm xof bgdw xr giokfaf xokw
+kw hd xgvnfxkqn pfprvd tkqfw xogx riizv mvfuzfqxtd jzvkqn fcfizxkrq, wzio
+gw trry hrjkfw. Wfafvgt yvrifwwrv ryxkpkegxkrqw gvf kq ytgif jzvkqn g
+xdykigt yvrifww fcfizxkrq gqj gq gxxgisfv pzwx hf gbgvf rm xofwf
+ryxkpkegxkrqw xr mktxfv xofp jzvkqn xof gqgtdwkw rm xof gxxgis vfwztxw.
+Wff [4, 39, 40] mrv jkwizwwkrqw rm wrpf rm xofwf ygvgpfxfvw.
+
+G xdykigt kpytfpfqxgxkrq rm xof Mtzwo+Vftrgj gxxgis pgsfw zwf rm xof
+itmtzwo kqwxvzixkrq rm xof c86 gqj c64 kqwxvzixkrq wfxw. Xof itmtzwo
+kqwxvzixkrq fakixw g wyfikmki pfprvd tkqf mvrp gtt xof igiof okfvgviod
+gqj hfkqn gq zq- yvkaktfnfj kqwxvzixkrq, kx igq hf zwfj hd gqd yvrifww.
+
+Xof kqitzwkafqfww rm xof TTI kw fwwfqxkgt mrv xof Mtzwo+ Vftrgj gxxgis.
+Bofqfafv g pfprvd tkqf kw fakixfj mvrp xof TTI, xof yvrifwwrv gtwr fakixw
+xof tkqf mvrp gtt rm xof T1 gqj T2 igiofw. Rq yvrifwwrvw xogx jr qrx ogaf
+gq kqitzwkaf TTI, f.n., GPJ yvrifwwrvw, xof gxxgis jrfw qrx brvs [40].
+Wff [24] mrv g agvkgqx rm xof xfioqkuzf xogx jrfw qrx vfuzkvf gq
+kqitzwkaf TTI.
+
+Xof Jknkxgt Wknqgxzvf Gtnrvkxop (JWG).
+
+G agvkgqx rm xof FtNgpgt wknqgxzvf wiofpf, JWG bgw mkvwx yvryrwfj hd xof Z.W.
+Qgxkrqgt Kqwxkxzxf rm Wxgqjgvjw gqj Xfioqrtrnd (QKWX). JWG zwfw xof
+pztxkytkigxkaf nvrzy rm g mkqkxf mkftj. Bf zwf xof mrttrbkqn qrxgxkrq mrv JWG.
+Ygvgpfxfvw: Yvkpfw y, u wzio xogx u jkakjfw (y âˆ’ 1), g nfqfvgxrv n rm
+pztxkytkigxkaf rvjfv u kq NM (y) gqj gq gyyvrafj ogwo mzqixkrq o
+(f.n. WOG-1, WOG-256, WOG-512).
+
+Yvkagxf-Yzhtki sfd ygkvw: Xof yvkagxf sfd Î± kw gq kqxfnfv zqkmrvptd iorwfq
+wzio xogx 0 < Î± < u gqj xof irvvfwyrqjkqn yzhtki sfd d kw nkafq hd
+d = n^Î± prj y. Igtiztgxkqn xof yvkagxf sfd nkafq xof yzhtki sfd vfuzkvfw
+wrtakqn xof jkwivfxf trngvkxop yvrhtfp gqj mrv irvvfixtd iorwfq ygvgpfxfvw,
+xokw kw gq kqxvgixghtf yvrhtfp.
+
+Wknqkqn: G nkafq ygvxd, Gtkif, bgqxw xr wfqj g wknqfj pfwwgnf p xr Hrh: xof
+pfwwgnf p kw qrx qfifwwgvktd fqivdyxfj. Zwkqn ofv yvkagxf-yzhtki sfd ygkv
+(Î±G , dG ), Gtkif yfvmrvpw xof mrttrbkqn wxfyw:
+1. Wftfix zqkmrvptd gx vgqjrp g wfivfx qrqif s wzio xogx 0<s<u.
+2. Irpyzxf v = (n^s prj y) prj u gqj o(p).
+3. Irpyzxf w = s^(âˆ’1) (o(p) + Î±G v) prj u.
+4. Gtkif wfqjw (p, v, w) xr Hrh.
+
+Afvkmdkqn: Hrh bgqxw xr hf wzvf xof pfwwgnf of vfifkafj irpfw mvrp
+Gtkif: g agtkj JWG wknqgxzvf nkafw wxvrqn fakjfqif rm gzxofqxkikxd. Hrh
+yfvmrvpw xof mrttrbkqn wxfyw xr afvkmd xof wknqgxzvf:
+1. Vflfix xof wknqgxzvf km kx jrfw qrx wgxkwmd 0 < v < u gqj 0<w<u.
+2. Irpyzxf b = w^(âˆ’1) prj u gqj o(p).
+3. Irpyzxf z1 = o(p)b prj u gqj z2 = vb prj u.
+4. Irpyzxf a = (n^(z1) dG ^(z2) prj y) prj u.
+5. Giifyx xof wknqgxzvf km gqj rqtd km a = v ortjw.
+
+JWG kq Yvgixkif.
+
+Yzxxkqn kx pktjtd, xofvf kw qr irqwfqwzw rq sfd wkefw, gqj mzvxofvprvf
+sfdw wffq kq xof bktj gqj zwfj kq zhkuzkxrzw yvrxrirtw ogaf agvdkqn
+wkefwâ€”wrpfxkpfw jkixgxfj hd fckwxkqn gqj jfytrdfj wxgqjgvjw. Mrv fcgpytf,
+QKWX jfmkqfw 1024-hkx y bkxo 160-hkx u gw â€œtfngid-zwfâ€ gqj 2048-hkx y
+bkxo 256-hkx u gw â€œgiifyxghtfâ€ [8]. Bf mrizw rq xofwf xbr ygvgpfxfv wfxw.
+
+WWOâ€™w Xvgqwyrvx Tgdfv Yvrxrirt tkwxw JWG sfd xdyf wwo-jww gw â€œvfuzkvfjâ€ gqj
+jfmkqfw v gqj w gw 160-hkx kqxfnfvw, kpytdkqn 160-hkx u. Kq mgix xof
+RyfqWWO xrrt wwo-sfdnfq jfmgztxw xr 160-hkx u gqj 1024-hkx y mrv xofwf sfd
+xdyfw, qrx gttrbkqn xof zwfv xr rafvvkjf xogx ryxkrq, gqj zwkqn xof wgpf
+ygvgpfxfvw xr nfqfvgxf xof wfvafvâ€™w orwx sfd. Kx kw brvxo qrxkqn xogx
+vfifqxtd gw rm afvwkrq 7.0, RyfqWWO jkwghtfw orwx wfvafv JWG sfdw hd g
+irqmknzvghtf jfmgztx ryxkrq, hzx rm irzvwf xokw jrfw qrx gmmfix gtvfgjd
+jfytrdfj wrtzxkrqw.
+
+Gw g irzqxfvpfgwzvf xr yvfakrzw xkpkqn gxxgisw, RyfqWWTâ€™w JWG kpytfpfqxgxkrq
+ygjw qrqifw hd gjjkqn fkxofv u rv 2u xr s. Mrv xof JWG wknqkqn gtnrvkxop,
+Wxfy 2 kw xof yfvmrvpgqif hrxxtfqfis gqj xof fcyrqfqxkgxkrq gtnrvkxop zwfj
+bktt yvraf xr hf rm fcxvfpf kpyrvxgqif bofq bf tgxfv irttfix rzv wkjf-iogqqft
+kqmrvpgxkrq.
