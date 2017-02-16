@@ -3,12 +3,16 @@ package decryptor;
 import datasource.DataSource;
 import org.apache.commons.lang3.CharUtils;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class SubstitutionDecryptor extends CharacterDecryptor implements Decryptor {
     private char[] determinedAlphabet;
+    private Map<Character, Character> letterMapping;
 
     SubstitutionDecryptor(DataSource dataSource) {
         this.setCipher(dataSource.getContents());
@@ -20,37 +24,36 @@ public class SubstitutionDecryptor extends CharacterDecryptor implements Decrypt
     }
 
     public void decrypt() {
-        Map<Character, Character> letterMapping = new HashMap<Character, Character>();
-        if (determinedAlphabet == null) {
-            //Do it the hard way
-            letterMapping = getLetterMapping(getLetterFrequency());
-            decrypt(letterMapping);
-        } else {
-            //Wow this is easy
-            //Build the map
-            for (int i = 0; i < 26; i++) {
-                letterMapping.put(alphabet[i], determinedAlphabet[i]);
-            }
-            decrypt(letterMapping);
-        }
+        Map<Character, Character> letterMapping = getLetterMapping(getLetterFrequency());
+        decrypt(letterMapping);
     }
 
     private Map<Character, Character> getLetterMapping(double[] letterFrequency) {
         Map<Character, Character> letterMap = new HashMap<Character, Character>();
-        Map<Integer, Integer> orderMap =  new HashMap<Integer, Integer>();
-        double[] old = new double[26];
-        System.arraycopy(letterFrequency, 0, old, 0, 26);
-        Arrays.sort(letterFrequency);
+        if (determinedAlphabet == null) {
+            //Do it the hard way
+            Map<Integer, Integer> orderMap = new HashMap<Integer, Integer>();
+            double[] old = new double[26];
+            System.arraycopy(letterFrequency, 0, old, 0, 26);
+            Arrays.sort(letterFrequency);
 
 
-        for (int i = 0; i < 26; i++) {
-            orderMap.put(Arrays.binarySearch(letterFrequency, old[i]), i);
+            for (int i = 0; i < 26; i++) {
+                orderMap.put(Arrays.binarySearch(letterFrequency, old[i]), i);
+            }
+
+            for (int i = 0; i < 26; i++) {
+                int indexOfLetter = super.findClosestMatchInArray(super.letterFrequencies, letterFrequency[i]);
+                letterMap.put(alphabet[i], alphabet[orderMap.get(indexOfLetter)]);
+            }
+        } else {
+            //Wow this is easy
+            //Build the map
+            for (int i = 0; i < 26; i++) {
+                letterMap.put(alphabet[i], determinedAlphabet[i]);
+            }
         }
-
-        for (int i = 0; i < 26; i++) {
-            int indexOfLetter = super.findClosestMatchInArray(super.letterFrequencies, letterFrequency[i]);
-            letterMap.put(alphabet[i], alphabet[orderMap.get(indexOfLetter)]);
-        }
+        this.letterMapping = letterMap;
         return letterMap;
     }
 
@@ -65,4 +68,31 @@ public class SubstitutionDecryptor extends CharacterDecryptor implements Decrypt
             }
         }
     }
+
+    public void saveToStream(OutputStream stream) {
+        try {
+            stream.write("---BEGIN PLAINTEXT DOCUMENT---\n".getBytes(StandardCharsets.UTF_8));
+            stream.write(getPlaintext().getBytes(StandardCharsets.UTF_8));
+            stream.write("---END PLAINTEXT DOCUMENT---\n".getBytes(StandardCharsets.UTF_8));
+            stream.write("\n".getBytes(StandardCharsets.UTF_8));
+            stream.write(this.toString().getBytes(StandardCharsets.UTF_8));
+            stream.close();
+        } catch (IOException e) {
+            throw new RuntimeException("Writing to stream failed", e);
+        }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder metrics = new StringBuilder();
+        metrics.append(super.toString());
+
+        if (letterMapping == null) {
+            getLetterMapping(getLetterFrequency());
+        }
+
+        metrics.append("\nMetrics are in format: ciphertext character = plaintext character.\n");
+        return metrics.append(letterMapping.toString()).append("\n").toString();
+    }
+
 }

@@ -6,7 +6,6 @@ import org.apache.commons.lang3.CharUtils;
 public class CesarDecryptor extends CharacterDecryptor implements Decryptor {
     private Integer offset;
 
-
     CesarDecryptor(int offset, String cipher) {
         this.setOffset(offset);
         this.setCipher(cipher.toCharArray());

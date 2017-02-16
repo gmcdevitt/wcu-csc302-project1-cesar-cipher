@@ -16,7 +16,7 @@ abstract class CharacterDecryptor {
                     's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
     /**
-     * Taken from https://www.math.cornell.edu/~mec/2003-2004/cryptography/subs/frequencies.html
+     * Taken from https://en.wikipedia.org/wiki/Letter_frequency
      * General frequency of each letter in the english alphabet
      */
     double[] letterFrequencies =
@@ -73,6 +73,17 @@ abstract class CharacterDecryptor {
         }
         searchArray[idx] = -1;
         return idx;
+    }
+
+    @Override
+    public String toString() {
+        double[] frequency = getLetterFrequency();
+        StringBuilder metrics = new StringBuilder();
+        metrics.append("Metrics are in format: ('letter', 'percent occurcance')\n");
+        for (int i = 0; i < 26; i++) {
+            metrics.append(String.format("('%s','%s')\n", alphabet[i], frequency[i]));
+        }
+        return metrics.toString();
     }
 
 }
